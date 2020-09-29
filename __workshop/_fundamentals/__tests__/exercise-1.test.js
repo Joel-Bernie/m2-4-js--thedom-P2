@@ -11,6 +11,29 @@ test("Exercise 1", () => {
     "5",
   ]);
   // add more tests here...
+  expect(convertToString(["Peter", "Lois", "Chris", "Meg", "Stewie", "Brian"])).toStrictEqual([
+    "Peter",
+    "Lois",
+    "Chris",
+    "Meg",
+    "Stewie",
+    "Brian"
+  ]);
+  expect(convertToString([4, "Jack", 8, "Kate", 15, "John"])).toStrictEqual([
+    "4",
+    "Jack",
+    "8",
+    "Kate",
+    "15",
+    "John"
+  ]);
+  expect(convertToString([true, false, null, undefined, 88])).toStrictEqual([
+    "true",
+    "false",
+    "",
+    "",
+    "88"
+  ]);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect
