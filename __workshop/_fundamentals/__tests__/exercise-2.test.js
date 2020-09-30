@@ -5,6 +5,9 @@ const redacted = require("../exercise-2");
 test("Exercise 2", () => {
   expect(redacted(["bacon", false, 42])).toStrictEqual(["redacted", false, 42]);
   // add more tests here...
+  expect(redacted([null, undefined, ""])).toStrictEqual([null, undefined, 'redacted']);
+  expect(redacted([1, 2, 3])).toStrictEqual([1, 2, 3]);
+  expect(redacted(["This is a string with multiple words inside an array"])).toStrictEqual(['redacted']);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

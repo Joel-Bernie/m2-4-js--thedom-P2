@@ -10,6 +10,15 @@
 
 const redacted = (arr) => {
   // Insert missing solution please
+ const newArr = arr.map(function(item) {
+  if(typeof item === "string") {
+    return 'redacted'
+  } else {
+    return item
+  }
+ });
+
+ return newArr;
 };
 
 // Part 2 - Test
